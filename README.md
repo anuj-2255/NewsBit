@@ -1,4 +1,4 @@
-# shortnews
+# NewsBit
 
 A new Flutter application.
 
