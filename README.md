@@ -1,13 +1,13 @@
 # NewsBit
 
-A cross-platform new sappliaction for android and ios both. 
+A cross-platform news appliaction for android and ios both. 
 
 ## Brief
 
-- It use NewsApi.org api service to get the latest news.
-- Provide lateste news with short relevent description to save time.
+- It uses NewsApi.org api service to get the latest news.
+- Provide latestest news with short relevent description to save time.
 - App has smooth transition animation with simple and good UI.
-- it has various feature like category, option for search news, share it on social media.
+- it has various feature like category, option for search news and share it on social media.
 - User can also read whole article by tapping on read more button.
 
 ## Technology used:-
