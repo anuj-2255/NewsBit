@@ -12,7 +12,7 @@ A cross-platform new sappliaction for android and ios both.
 
 ## Technology used:-
 
--This Application developed in Flutter fremawork using Dart langauge along with other flutter libraries.
+- This Application developed in Flutter fremawork using Dart langauge along with other flutter libraries.
 
 ## Screenshots
 
