@@ -38,7 +38,7 @@ class CategoryTile extends StatelessWidget {
                     imageUrl: imageUrl,
                     width: double.infinity,
                     fit: BoxFit.cover,
-                  )),
+                  )),	
               ClipRRect(
                 borderRadius:
                     BorderRadius.all(Radius.circular(Constants.radius)),

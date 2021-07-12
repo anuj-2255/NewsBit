@@ -12,13 +12,11 @@ class Constants {
     return categoryUrl;
   }
 
-  static String getSearch(String keyword) {
-    final String searchUrl =
-        'https://newsapi.org/v2/top-headlines?country=in&q=$keyword&apiKey=f13d32be5c2e49ecb4844d7d6bfabf30';
-    return searchUrl;
-  }
-
-  static bool isDark = false;
+	  static String getSearch(String keyword) {
+		final String searchUrl =
+			'https://newsapi.org/v2/top-headlines?country=in&q=$keyword&apiKey=f13d32be5c2e49ecb4844d7d6bfabf30';
+		return searchUrl;
+	  }
 
   static const double radius = 15;
 

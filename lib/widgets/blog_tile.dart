@@ -9,14 +9,13 @@ import 'package:shortnews/views/article_view.dart';
 
 class BlogTile extends StatelessWidget {
   final String imageUrl, title, description, url;
-  final bool isDark;
 
-  BlogTile(
-      {@required this.imageUrl,
-      @required this.description,
-      @required this.title,
-      @required this.url,
-      @required this.isDark});
+  BlogTile({
+    @required this.imageUrl,
+    @required this.description,
+    @required this.title,
+    @required this.url,
+  });
 
   @override
   Widget build(BuildContext context) {

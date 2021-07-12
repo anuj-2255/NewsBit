@@ -1,5 +1,7 @@
 import 'dart:convert';
+import 'dart:developer';
 
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 import 'package:shortnews/helper/constants.dart';
 import 'package:shortnews/model/article_model.dart';
@@ -12,6 +14,7 @@ class News {
 
     var response = await http.get(url);
     var jsonData = jsonDecode(response.body);
+    log('$jsonData');
     if (jsonData['status'] == 'ok') {
       jsonData['articles'].forEach((element) {
         if (element['urlToImage'] != null &&
@@ -28,6 +31,8 @@ class News {
           news.add(articleModel);
         }
       });
+    } else {
+      Fluttertoast.showToast(msg: 'some error occurred');
     }
   }
 }

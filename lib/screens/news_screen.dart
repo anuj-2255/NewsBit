@@ -1,10 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:shortnews/helper/news.dart';
 import 'package:shortnews/helper/animation.dart';
 import 'package:shortnews/helper/constants.dart';
-import 'package:shortnews/helper/news.dart';
-import 'package:shortnews/model/article_model.dart';
 import 'package:shortnews/widgets/blog_tile.dart';
+import 'package:shortnews/model/article_model.dart';
 import 'package:shortnews/widgets/custom_actionbar.dart';
 import 'package:transformer_page_view/transformer_page_view.dart';
 
@@ -25,8 +25,6 @@ class _NewsScreenState extends State<NewsScreen> {
   bool _loading = true;
   bool _actionBar = true;
   String _title = 'My Feed';
-
-//  bool _isDark = Constants.isDark;
 
   @override
   void initState() {
@@ -72,7 +70,6 @@ class _NewsScreenState extends State<NewsScreen> {
               ),
             )
           : Container(
-              color: Constants.isDark ? Colors.black : Colors.white,
               child: Stack(
                 children: [
                   GestureDetector(
@@ -97,7 +94,6 @@ class _NewsScreenState extends State<NewsScreen> {
                         scrollDirection: Axis.vertical,
                         itemBuilder: (context, index) {
                           return BlogTile(
-                            isDark: false,
                             url: _articles[index].url,
                             imageUrl: _articles[index].urlToImage,
                             title: _articles[index].title,
@@ -113,11 +109,6 @@ class _NewsScreenState extends State<NewsScreen> {
                           text: _title,
                           hasDarkMode: false,
                           hasRightButton: false,
-                          rightButtonTap: () {
-                            setState(() {
-                              Constants.isDark = true;
-                            });
-                          },
                         )
                       : Opacity(opacity: 0)
                 ],

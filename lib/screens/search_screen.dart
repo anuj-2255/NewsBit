@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:shortnews/helper/constants.dart';
 import 'package:shortnews/helper/news.dart';
 import 'package:shortnews/model/article_model.dart';
-import 'package:shortnews/widgets/blog_tile.dart';
+import 'package:shortnews/screens/resultshow.dart';
 import 'package:shortnews/widgets/search_bar.dart';
 import 'package:shortnews/widgets/search_result_tile.dart';
 
@@ -97,16 +97,17 @@ class _SearchActivityState extends State<SearchActivity> {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => BlogTile(
-                                                imageUrl: _searchResult[index]
-                                                    .urlToImage,
-                                                description:
-                                                    _searchResult[index]
-                                                        .description,
-                                                title:
-                                                    _searchResult[index].title,
-                                                url: _searchResult[index].url,
-                                                isDark: false)));
+                                            builder: (context) => ResultScreen(
+                                                  imageUrl: _searchResult[index]
+                                                      .urlToImage,
+                                                  url: _searchResult[index].url,
+                                                  title: _searchResult[index]
+                                                      .title,
+                                                  description:
+                                                      _searchResult[index]
+                                                          .description,
+                                                  key: widget.key,
+                                                )));
                                   },
                                   title: _searchResult[index].title,
                                   imageUrl: _searchResult[index].urlToImage,
